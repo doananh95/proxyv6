@@ -60,7 +60,7 @@ upload_proxy() {
     zip --password $PASS proxy.zip proxy.txt
     URL=$(curl -F "file=@proxy.zip" https://file.io)
 
-    echo "Proxy is ready! Format IP:PORT:LOGIN:PASS"
+    echo "Proxy is ready! Format IP:PORT"
     echo "Download zip archive from: ${URL}"
     echo "Password: ${PASS}"
 
@@ -98,7 +98,7 @@ IP6=$(curl -6 -s icanhazip.com | cut -f1-4 -d':')
 echo "Internal ip = ${IP4}. Exteranl sub for ip6 = ${IP6}"
 
 FIRST_PORT=40001
-LAST_PORT=43000
+LAST_PORT=42000
 
 gen_data >$WORKDIR/data.txt
 gen_iptables >$WORKDIR/boot_iptables.sh
