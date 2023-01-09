@@ -1,5 +1,4 @@
 #!/bin/sh
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 random() {
 	tr </dev/urandom -dc A-Za-z0-9 | head -c5
